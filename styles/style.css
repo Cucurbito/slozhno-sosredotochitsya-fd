@@ -287,8 +287,6 @@
   color: var(--text-font-color, #f1b2ce);
   line-height: 23.4px;
 
-  @media (width >=1024px) {
-  }
 }
 
 .card-list-advice {
