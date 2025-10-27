@@ -153,6 +153,7 @@
   font-size: var(--main-font-size, 18px);
   text-transform: lowercase;
   background-color: transparent;
+  transition: border 0.5s;
 }
 
 .header__theme-menu-button:hover {
@@ -179,10 +180,7 @@
 
   @media (width >= 768px) {
     grid-row: 3 / span 2;
-  }
-
-  @media (width >= 1024px) {
-    font-size: 157px;
+    font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
   }
 }
 
@@ -203,7 +201,7 @@
 }
 
 .title-decor {
-  color: var(--main-font-color, #000028);
+  color: var(--title-decor-font-color, #000028);
   font-weight: 700;
   font-size: var(--main-font-size, 18px);
   line-height: 23.4px;
@@ -271,22 +269,20 @@
 
 .card {
   display: grid;
+  row-gap: 10px;
   font-size: var(--main-font-size);
-
   @media (width >=1024px) {
     align-self: start;
   }
 }
 
 .card__title {
-  margin-bottom: 10px;
   line-height: 23.4px;
 }
 
 .card__content {
   color: var(--text-font-color, #f1b2ce);
   line-height: 23.4px;
-
 }
 
 .card-list-advice {
@@ -298,6 +294,7 @@
   outline: none;
   text-decoration: none;
   text-shadow: 2px 2px 0 var(--accent-color);
+  transition: border-block-end 1s;
 }
 
 .link-in-text:hover {
@@ -312,6 +309,7 @@
   display: grid;
   grid-template-columns: 1fr;
   gap: 10px;
+  margin-top: 10px;
 
   @media (width >= 768px) {
     grid-template-columns: repeat(3, 1fr);
